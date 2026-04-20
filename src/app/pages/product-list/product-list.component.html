@@ -1,7 +1,13 @@
 <h2>Lista de Produtos</h2>
 
-<ul>
+<a routerLink="/products/new">Novo Produto</a>
+
+<ul *ngIf="products.length > 0; else semProdutos">
   <li *ngFor="let product of products">
     {{ product.name }} - {{ product.price | currency:'BRL' }}
   </li>
 </ul>
+
+<ng-template #semProdutos>
+  <p>Nenhum produto cadastrado</p>
+</ng-template>

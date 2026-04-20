@@ -1,0 +1,17 @@
+<h2>Criar Produto</h2>
+
+<form (ngSubmit)="onSubmit()">
+
+  <label>Nome:</label>
+  <input type="text" [(ngModel)]="name" name="name" />
+
+  <br /><br />
+
+  <label>Preço:</label>
+  <input type="number" [(ngModel)]="price" name="price" />
+
+  <br /><br />
+
+  <button type="submit">Salvar</button>
+
+</form>
